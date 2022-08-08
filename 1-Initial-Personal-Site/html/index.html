@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>✍ Mohit's Personal Site ✍</title>
+
+        <!-- Linking the CSS external file -->
+        <link rel="stylesheet" href="\1-Initial-Personal-Site\css\styles.css">
+    </head>
+
+    <body>
+        <table cellspacing="20">
+            <tr>
+                <!-- To display an image, you don't need to use a web url, you can also use a path -->
+                <td><img id="profile-pic" src="https://tinyurl.com/3ve4uzfd" alt="Image of Mohit Soni"></td>
+                <td>
+                    <h1 class="mohit-info" id="title">Mohit Soni</h1>
+                    <p class="mohit-info">
+                        Participating in a Machine Learning Research Project with a former UW Professor.
+                        Founder/President of a non-profit organization (YTDF) with a demonstrated 
+                        interest in computer science. Skilled in Python, C++, Java, HTML, CSS, 
+                        Javascript, and Octave. Additionally, an international and national cricket
+                        player (batsman). Currently pursuing my high school diploma from Tesla STEM
+                        High School where I am President of Cricket Club, Secretary of Programming 
+                        Club, and Treasurer of TSA (Technology Student Association).
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <!-- You should use the <em> tag, not the <i> tag
+        because the <em> tag tells the browser that the 
+        text is important, while the <i> tag just italicizes
+        the text. Same difference between <strong> and <b> -->
+
+        <hr>
+
+        <h3>Work Experience</h3>
+
+        <!-- Creating a table in html -->
+        <!-- You can create borders for the table but usually, you should leave styling to the CSS -->
+        <table cellspacing="20">
+            <!-- Most tables are structured with the thead tag and tbody tag -->
+            <!-- Even though the table looks the same without them, they can be useful
+            when we want to style the header of the table in a different way when compared to the body -->
+            <thead>
+                <tr>
+                    <th>Dates</th>
+                    <th>Work</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>March 2022 - Present</td>
+                    <td>Machine Learning Researcher at University of Washington (Seattle)</td>
+                </tr>
+                <tr>
+                    <td>April 2022 - Present</td>
+                    <td>Web Development Intern at Project Sidewalk</td>
+                </tr>
+                <tr>
+                    <td>June 2021 - Present</td>
+                    <td>Founder of YTDF</td>
+                </tr>
+                <tr>
+                    <td>July 2017 - Present</td>
+                    <td>National Youth Cricket Player for Washington State</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+
+        <h3>Skills</h3>
+
+        <table>
+            <tr>
+                <!-- Table for first column of skills -->
+                <td>
+                    <table cellspacing="10">
+                        <tr>
+                            <td>Python</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>⭐⭐⭐</td>
+                        </tr>
+                    </table>
+                </td>
+                
+                <!-- Table for second column of skills -->
+                <td>
+                    <table cellspacing="10">
+                        <tr>
+                            <td>Active Listening</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                        <tr>
+                            <td>Presenting</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- Linking to another html page -->
+        <!-- Here, we just included the file name because it is in the same folder as this file
+        Else, we would have to find the path relative to this file and then add that -->
+        <br><a href="education.html" target="_blank">My Education</a><br><br>
+        <a href="contact.html" target="_blank">Contact Me</a><br><br>
+
+    </body>
+</html>

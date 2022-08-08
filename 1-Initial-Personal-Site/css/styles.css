@@ -1,0 +1,56 @@
+/* Try to put the values inside each tag in alphabetical order
+as it makes it easier to debug */
+
+body {
+    background-color: #EAF6F6;
+}
+
+hr {
+    border-color: grey;
+    border-style: none;
+    border-top-style: dotted;
+    border-width: 5px;
+    width: 5%;
+}
+
+h1 {
+    color: #66BFBF
+}
+
+h3 {
+    color: #66BFBF
+}
+
+/* Hover here is a psuedoclass which allows you to change styling when
+the user hovers over a certain element */
+h1:hover {
+    font-style: italic;
+}
+
+/* Using Class Attribute in CSS, Override tag selectors */
+.mohit-info {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Using Id Attribute in CSS, Override tag and class selectors */
+#title {
+    font-size: 60px;
+}
+
+#profile-pic {
+    border-radius: 100%;
+}
+
+/* Difference between Id and class:
+    - You can use only 1 specific Id in an html file 
+    - However, you can use a specific class multiple times in the same
+    html file
+
+    - Also, you can have multiple classes for one element
+    - However, you cannot have multiple Id's for one element
+
+    - Therefore, you would only use Id when you want to identify one
+    specific item in a file
+    - You would use class when you want to identify a group of items
+    in a file
+*/
