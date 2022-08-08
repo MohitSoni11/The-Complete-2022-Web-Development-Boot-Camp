@@ -1,3 +1,177 @@
+/* Types of Displays: 
+    - Block (creates a block for the element)
+        - Problem: Doesn't let element sit on same line
+        - h1, p, div
+    - Inline (is inline to everything next to it)
+        - Problem: you cannot change width
+        - span, a
+    - Inline-block (is inline to everything next to it)
+        - You can change the width 
+        - img (are inline but can change width)
+    - None (element goes away)
+        - The element will disappear
+*/
+
+/* CSS Positioning:
+    - Static (default value for all html elements)
+    - Relative (position is relative to where it should be if position was static)
+        - Coordinates (left, right, top, bottom)
+        - Making something relatively positioned 
+        means that you can move it anywhere on 
+        the screen without changing any other element
+    - Absolute (position is relative to element's parent)
+        - Coordinates (left, right top, bottom)
+        - Making something absolutely positioned
+        means that you can move it anywhere on 
+        the screen but if you do, then it will
+        be removed from the natural flow of the file
+    - Fixed
+        - If you want the element to stay in the
+        same position on the page even when
+        the user is scrolling
+*/
+
 body {
-    background-color: blue;
+    color: #40514E;
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    color: #66BFBF;
+    font-family: 'Sacramento', cursive;
+    /* 100% = 1em = 16px and we want 90px*/
+    /* The em allows our font-size to be dynamic*/
+    /* Problem: If you set the font-size = 2em in the body (parent of h1),
+    then h1 inherits that size and increases the size below
+    
+    To help with that, you can use rem (root em) so the size isn't inherited
+    from parent elements
+    */
+    font-size: 5.625rem;
+    margin: 50px auto 0 auto;
+}
+
+h2 {
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+
+a {
+    color: #0f7f83;
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: lightgray;
+    width: 3%;
+    border-width: 5px;
+    margin: 100px auto 100px auto;
+}
+
+p {
+    line-height: 2;
+}
+
+.top-container {
+    background-color: #E4F9F5;
+    padding-top: 100px;
+}
+
+.bottom-cloud {
+    position: absolute;
+    left: 500px;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 500px;
+    top: 50px;
+}
+
+.profile > img {
+    border-radius: 100%;
+}
+
+.skill-row {
+    line-height: 2;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    width: 50%;
+}
+
+.python-img {
+    /* Width is 25% of the parent of the image */
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.ml-img {
+    /* Width is 25% of the parent of the image */
+    width: 25%;
+
+    /* What float = right does is it takes the image to the right 
+    and wraps the text around it on the left */
+    /* There is also an attribute called "clear" which is basically
+    the antifloat and if you say clear: right, then the text will
+    not wrap around anything to the right side. */
+    float: right;
+    margin-left: 30px;
+}
+
+.profile {
+    margin-top: 100px;
+}
+
+.profile > p {
+    width: 40%;
+    margin: auto;
+}
+
+.bottom-container {
+    background-color: #66BFBF;
+    padding-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+.bottom-container > a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px;
+}
+
+.bottom-container > a:hover {
+    color: white;
+}
+
+.bottom-container > p {
+    color: white;
+    margin-top: 40px;
+}
+
+.btn {
+    display: block;
+    background-color: #11cdd4;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 8px;
+    width: 6%;
+    margin: 70px auto;
+}
+
+.btn:hover {
+    background-color: #2bc4ad;
 }
