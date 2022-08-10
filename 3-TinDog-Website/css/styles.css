@@ -174,14 +174,14 @@ p {
 /* Using Media Queries for Responsiveness (In Addition to Bootstrap) */
 /* /////////////////////////// */
 
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
     .title-image {
         position: static;
-        width: 100%;
+        width: 60%;
         transform: rotate(0deg);
     }
 
-    #title {
+    #title .container-fluid {
         text-align: center;
     }
 }
