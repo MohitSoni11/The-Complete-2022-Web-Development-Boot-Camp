@@ -1,0 +1,15 @@
+{
+  "name": "11-weather-api-website",
+  "version": "1.0.0",
+  "description": "Creating a weather displaying website using a weather API.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohit Soni",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}
