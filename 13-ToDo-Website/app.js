@@ -4,6 +4,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 // Using own module
 const date = require(__dirname + "/date.js");
@@ -16,7 +17,18 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-const items = []; // will be useful later
+
+/////////////////////////////////////
+/******* Setting up Database *******/
+/////////////////////////////////////
+
+mongoose.connect("mongodb://localhost:27017/todolistDB");
+
+const itemsSchema = {
+  name: String
+}
+
+const Item = mongoose.model("Item", itemsSchema);
 
 /////////////////////////////////
 /******* Starting Server *******/
@@ -32,7 +44,11 @@ app.listen(3000, function() {
 
 app.get("/", function(req, res) {
   const day = date.getDay();
-  res.render("list", {listTitle: day, newListItems: items});
+
+  // Getting all items from database and giving them to the ejs files
+  Item.find({}, function(err, foundItems) {
+    res.render("list", {listTitle: day, newListItems: foundItems});
+  });
 });
 
 app.get("/about", function(req, res) {
@@ -44,6 +60,22 @@ app.get("/about", function(req, res) {
 /////////////////////////////////////////
 
 app.post("/", function(req, res) {
-  items.push(req.body.newItem);
+  const newItem = req.body.newItem;
+
+  // Adding the new item into the database
+  const item = new Item({name: newItem});
+  item.save();
+
+  res.redirect("/");
+});
+
+app.post("/delete", function(req, res) {
+  const checkedItemId = req.body.checkbox;
+  Item.findByIdAndRemove(checkedItemId, function(err) {
+    if (err) {
+      console.log(err);
+    }
+  });
+
   res.redirect("/");
 });
